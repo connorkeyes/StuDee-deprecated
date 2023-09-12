@@ -1,0 +1,22 @@
+{
+  "name": "studee",
+  "version": "1.0.0",
+  "description": "flashcard web application",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorkeyes/StuDee.git"
+  },
+  "author": "Connor Keyes",
+  "license": "MIT",
+  "homepage": "https://github.com/connorkeyes/StuDee",
+  "scripts": {
+    
+  },
+  "dependencies": {
+    "webpack": "^5.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0"
+  }
+}
