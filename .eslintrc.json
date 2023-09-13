@@ -2,11 +2,13 @@
     "root": true,
     "ignorePatterns": ["**/util"],
     "env": {
+      "browser": true,
       "node": true,
       "es2021": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": { "sourceType": "module" },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+    "parserOptions": { "sourceType": "module", "ecmaVersion": 12, "ecmaFeatures": {"jsx": true} },
+    "plugins": ["react", "react-hooks"],
     "rules": {
       "indent": ["warn", 2],
       "no-unused-vars": ["off", { "vars": "local" }],

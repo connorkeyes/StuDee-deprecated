@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '../client/index.html'));
+  res.status(200).sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 app.get('/styles.css', (req, res) => {
@@ -18,6 +18,10 @@ app.get('/styles.css', (req, res) => {
 
 app.get('/client/index.js', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../client/index.js'));
+});
+
+app.get('/build/bundle.js', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, '../build/bundle.js'));
 });
 
 // Unknown route handler
