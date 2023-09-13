@@ -131,3 +131,6 @@ dist
 
 # npm
 package-lock.json
+
+# prettier
+.prettierrc
