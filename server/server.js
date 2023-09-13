@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
+const userController = require('./controllers/userController');
 const app = express();
-const mongoose = require('mongoose');
 
 const PORT = 3000;
 
@@ -10,19 +10,23 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '../build/index.html'));
+  return res.status(200).sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 app.get('/styles.css', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '../client/styles.css'));
+  return res.status(200).sendFile(path.join(__dirname, '../client/styles.css'));
 });
 
 app.get('/client/index.js', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '../client/index.js'));
+  return res.status(200).sendFile(path.join(__dirname, '../client/index.js'));
 });
 
 app.get('/build/bundle.js', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '../build/bundle.js'));
+  return res.status(200).sendFile(path.join(__dirname, '../build/bundle.js'));
+});
+
+app.post('/login', userController.login, (req, res) => {
+  return res.status(200).json({});
 });
 
 // Unknown route handler

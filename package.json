@@ -12,7 +12,8 @@
   "homepage": "https://github.com/connorkeyes/StuDee",
   "scripts": {
     "start": "nodemon server/server.js",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack serve --open"
   },
   "dependencies": {
     "browserify": "^17.0.0",

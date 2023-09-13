@@ -7,19 +7,19 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-  username: {type: String, required: true, unique: true},
-  password: {type: String, required: true},
-  dataSets: {type: [dataSetSchema], default: []}
+const flashcardSchema = new Schema({
+  front: {type: String, required: true},
+  back: {type: String, required: true}
 });
 
 const dataSetSchema = new Schema({
   flashCards: {type: [flashcardSchema], default: []}
 });
 
-const flashcardSchema = new Schema({
-  front: {type: String, required: true},
-  back: {type: String, required: true}
+const userSchema = new Schema({
+  username: {type: String, required: true, unique: true},
+  password: {type: String, required: true},
+  dataSets: {type: [dataSetSchema], default: []}
 });
 
 const Flashcard = mongoose.model('Flashcard', flashcardSchema);
