@@ -20,8 +20,6 @@ app.get('/client/index.js', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../client/index.js'));
 });
 
-
-
 // Unknown route handler
 app.use((req, res) => res.sendStatus(404));
 

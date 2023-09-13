@@ -22,8 +22,12 @@ const flashcardSchema = new Schema({
   back: {type: String, required: true}
 });
 
-
+const Flashcard = mongoose.model('Flashcard', flashcardSchema);
+const DataSet = mongoose.model('Dataset', dataSetSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = {
-
+  Flashcard,
+  DataSet,
+  User
 };
