@@ -1,3 +1,6 @@
 body {
-  background-color: blue;
+  
+  background-image: url('https://cdn.dribbble.com/users/2147508/screenshots/4398055/render_dribbble.gif');
+  background-size: cover;
+  background-position: center;
 }
