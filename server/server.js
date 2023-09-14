@@ -17,16 +17,24 @@ app.get('/styles.css', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../client/styles.css'));
 });
 
+app.get('/styles1.css', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../client/styles1.css'));
+});
+
 app.get('/client/index.js', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../client/index.js'));
 });
 
-app.get('/build/bundle.js', (req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, '../build/bundle.js'));
+app.get('/build/mainbundle.js', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../build/mainbundle.js'));
+});
+
+app.get('/build/cardsbundle.js', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../build/cardsbundle.js'));
 });
 
 app.post('/login', userController.login, (req, res) => {
-  if (res.locals.success) return res.status(200).sendFile(path.join(__dirname, '../client/cards.html'));
+  if (res.locals.success) return res.status(200).sendFile(path.join(__dirname, '../build/cards.html'));
   else return res.status(200).json({});
 });
 

@@ -2,7 +2,6 @@ import React from 'react';
 // import from child components...
 
 const LoginForm = () => {
-  
 
   return (
     <div>

@@ -2,10 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './client/index.js',
+  entry: {
+    main: './client/index.js',
+    cards: './client/index1.js'
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: '[name]bundle.js'
   },
   mode: process.env.NODE_ENV,
   module: {
@@ -31,8 +34,16 @@ module.exports = {
     ]
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'Development',
-    template: 'client/index.html'
+    title: 'Login',
+    filename: 'index.html',
+    template: 'client/index.html',
+    chunks: ['main']
+  }),
+  new HtmlWebpackPlugin({
+    title: 'Cards',
+    filename: 'cards.html',
+    template: 'client/cards.html',
+    chunks: ['cards']
   })],
   devServer: {
     static: {
