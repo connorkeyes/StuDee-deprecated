@@ -26,13 +26,17 @@ app.get('/build/bundle.js', (req, res) => {
 });
 
 app.post('/login', userController.login, (req, res) => {
-  if (res.locals.success) return res.status(200).json(res.locals.user);
+  if (res.locals.success) return res.status(200).sendFile(path.join(__dirname, '../client/cards.html'));
   else return res.status(200).json({});
 });
 
 app.post('/signup', userController.signUp, (req, res) => {
   if (res.locals.success) return res.status(200).json(res.locals.user);
   else return res.status(200).json({});
+});
+
+app.get('/cards', (req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 // Unknown route handler

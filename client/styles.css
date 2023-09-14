@@ -1,6 +1,78 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu Light', 'Century Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
 body {
-  
   background-image: url('https://cdn.dribbble.com/users/2147508/screenshots/4398055/render_dribbble.gif');
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 1%;
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 20px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  border-width: 1px;
+  font-size: 150%;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-color: white;
+  padding-top: 0.25%;
+  padding-bottom: 0.25%;
+  border-style: hidden;
+}
+
+.loginHeader {
+  font-size: 225%;
+  /* font-family: 'M PLUS Code Latin', sans-serif; */
+  padding-bottom: 1%;
+}
+
+.loginButton {
+  background-color: navy;
+  color: white;
+  border-color: navy;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#loginOr {  
+  padding-bottom: 1%;
+}
+
+#title {
+  font-family: 'M PLUS Code Latin', sans-serif;
+  color: navy;
+  font-size: 700%;
+  padding-bottom: 5%;
+  padding-top: 10%;
+}
+
+.outerBox {
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 15px black;
+  border-radius: 20px;
+  background-color: rgb(252, 222, 226);
+  margin-top: 1.5%;
+  padding-bottom: 1%;
+}
+
+#header {
+  text-align: center;
+  letter-spacing: .2em;
+  margin-bottom: 10%;
+  margin-top: 10%;
 }
